@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Accordion from "./components/Accordion";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+// we can create items inside the component for out side the component it does not matter because it is a static Array
+const items = [
+   {
+      title: "What is React?",
+      content: "React is a front-end javascript library.",
+   },
+   {
+      title: "Why use react?",
+      content: "React is a good JS library.",
+   },
+   {
+      title: "How do you use react?",
+      content: "You can use react by creating component.",
+   },
+];
+
+const App = (props) => {
+   return (
+      <div>
+         <Accordion items={items} />
+      </div>
+   );
+};
 
 export default App;
