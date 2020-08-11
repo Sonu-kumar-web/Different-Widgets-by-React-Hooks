@@ -1,11 +1,20 @@
 import React from "react";
 
 const Accordion = ({ items }) => {
-   return (
-      <div>
-         <h1>{items.length}</h1>
-      </div>
-   );
+   const renderItems = items.map((item) => {
+      return (
+         <React.Fragment key={item.title}>
+            <div className="title active">
+               <i className="dropdown icon"></i>
+               {item.title}
+            </div>
+            <div className="content active">
+               <p>{item.content}</p>
+            </div>
+         </React.Fragment>
+      );
+   });
+   return <div className="ui styled accordion">{renderItems}</div>;
 };
 
 export default Accordion;

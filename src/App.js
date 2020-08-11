@@ -1,7 +1,7 @@
 import React from "react";
 import Accordion from "./components/Accordion";
 
-// we can create items inside the component for out side the component it does not matter because it is a static Array
+// we can create items inside the component for outside the component it does not matter because it is a static Array
 const items = [
    {
       title: "What is React?",
@@ -17,7 +17,7 @@ const items = [
    },
 ];
 
-const App = (props) => {
+const App = () => {
    return (
       <div>
          <Accordion items={items} />
