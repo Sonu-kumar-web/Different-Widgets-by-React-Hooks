@@ -1,5 +1,6 @@
 import React from "react";
 import Accordion from "./components/Accordion";
+import Search from "./components/Search";
 
 // we can create items inside the component for outside the component it does not matter because it is a static Array
 const items = [
@@ -20,7 +21,8 @@ const items = [
 const App = () => {
    return (
       <div>
-         <Accordion items={items} />
+         {/* <Accordion items={items} /> */}
+         <Search />
       </div>
    );
 };
