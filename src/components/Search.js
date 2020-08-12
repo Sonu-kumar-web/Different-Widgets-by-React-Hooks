@@ -26,9 +26,17 @@ const Search = () => {
          setResults(data.query.search);
       };
 
-      if (term) {
-         search();
-      }
+      //   User for Delay Request
+      const timeoutId = setTimeout(() => {
+         if (term) {
+            search();
+         }
+      }, 500);
+
+      // A function return by useEffect hook as a CLEANUP
+      return () => {
+         clearTimeout(timeoutId);
+      };
    }, [term]);
 
    //    Render results
