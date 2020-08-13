@@ -6,8 +6,6 @@ const Search = () => {
    const [term, setTerm] = useState("Programming");
    const [results, setResults] = useState([]);
 
-   console.log(results);
-
    // Fetch data from wikipedia Api
    useEffect(() => {
       const search = async () => {
@@ -24,25 +22,37 @@ const Search = () => {
             }
          );
          setResults(data.query.search);
+         console.log(data);
       };
 
-      //   User for Delay Request
-      const timeoutId = setTimeout(() => {
-         if (term) {
-            search();
-         }
-      }, 500);
+      // Searching on initial render
+      if (term && !results.length) {
+         search();
+      } else {
+         //   User for Delay Request
+         const timeoutId = setTimeout(() => {
+            if (term) {
+               search();
+            }
+         }, 500);
 
-      // A function return by useEffect hook as a CLEANUP
-      return () => {
-         clearTimeout(timeoutId);
-      };
-   }, [term]);
+         // A function return by useEffect hook as a CLEANUP
+         return () => {
+            clearTimeout(timeoutId);
+         };
+      }
+      // we have added result.length inside depencecny arrar (second argument) because of this warning 
+      // React Hook useEffect has a missing dependency: 'results.length'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+   }, [term, results.length]);
 
    //    Render results
    const renderedResults = results.map((result) => {
       return (
-         <div key={result.pageid} className="item">
+         <div
+            key={result.pageid}
+            className="item"
+            style={{ backgroundColor: "#d4d4d5", margin: 2 }}
+         >
             <div className="right floated content">
                <a
                   className="ui button"
