@@ -41,7 +41,7 @@ const Search = () => {
             clearTimeout(timeoutId);
          };
       }
-      // we have added result.length inside depencecny arrar (second argument) because of this warning 
+      // we have added result.length inside depencecny array (second argument) because of this warning
       // React Hook useEffect has a missing dependency: 'results.length'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
    }, [term, results.length]);
 
