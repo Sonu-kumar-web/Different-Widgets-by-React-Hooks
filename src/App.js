@@ -27,11 +27,15 @@ const options = [
    },
    {
       label: "The Color Green",
-      value: "red",
+      value: "green",
    },
    {
       label: "A Shade of Blue",
       value: "blue",
+   },
+   {
+      label: "The Color Orange",
+      value: "orange",
    },
 ];
 
