@@ -7,12 +7,18 @@ const Dropdown = ({ options, selected, onSelectedChange }) => {
 
    // useEffect hook run only once
    useEffect(() => {
-      document.body.addEventListener("click", (event) => {
+      const onBodyClick = (event) => {
          if (ref.current.contains(event.target)) {
             return;
          }
+         document.body.addEventListener("click", onBodyClick);
          setOpen(false);
-      });
+      };
+
+      // Clean-up function
+      return () => {
+         document.body.removeEventListener("click", onBodyClick);
+      };
    }, []);
 
    const renderedOptions = options.map((option) => {
