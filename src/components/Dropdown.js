@@ -11,9 +11,10 @@ const Dropdown = ({ options, selected, onSelectedChange }) => {
          if (ref.current.contains(event.target)) {
             return;
          }
-         document.body.addEventListener("click", onBodyClick);
          setOpen(false);
       };
+
+      document.body.addEventListener("click", onBodyClick);
 
       // Clean-up function
       return () => {
@@ -58,6 +59,11 @@ const Dropdown = ({ options, selected, onSelectedChange }) => {
                   {renderedOptions}
                </div>
             </div>
+         </div>
+         <div style={{ textAlign: "center" }}>
+            <h1
+               style={{ color: `${selected.value}`, fontSize: 50 }}
+            >{`The text color is ${selected.value}!`}</h1>
          </div>
       </div>
    );
