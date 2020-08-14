@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Accordion from "./components/Accordion";
 import Search from "./components/Search";
 import Dropdown from "./components/Dropdown";
+import Translate from "./components/Translate";
 
 // we can create items inside the component for outside the component it does not matter because it is a static Array
 const items = [
@@ -47,7 +48,7 @@ const App = () => {
       <div>
          {/* <Accordion items={items} /> */}
          {/* <Search /> */}
-         <button onClick={() => setShowDropdown(!showDropdown)}>
+         {/* <button onClick={() => setShowDropdown(!showDropdown)}>
             Toggle Dropdown
          </button>
          {showDropdown ? (
@@ -56,7 +57,8 @@ const App = () => {
                selected={selected}
                onSelectedChange={setSelected}
             />
-         ) : null}
+         ) : null} */}
+         <Translate />
       </div>
    );
 };
