@@ -20,6 +20,10 @@ const options = [
       label: "Bengali",
       value: "bn",
    },
+   {
+      label: "Kannada",
+      value: "kn",
+   },
 ];
 
 const Translate = () => {
