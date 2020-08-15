@@ -39,6 +39,7 @@ const Translate = () => {
             </div>
          </div>
          <Dropdown
+            display="none"
             label="Select a Language"
             options={options}
             selected={language}

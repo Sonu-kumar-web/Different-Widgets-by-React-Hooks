@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 
-const Dropdown = ({ label, options, selected, onSelectedChange }) => {
+const Dropdown = ({ display, label, options, selected, onSelectedChange }) => {
    const [open, setOpen] = useState(false);
 
    const ref = useRef();
@@ -61,7 +61,7 @@ const Dropdown = ({ label, options, selected, onSelectedChange }) => {
                </div>
             </div>
          </div>
-         <div style={{ textAlign: "center", display: "none" }}>
+         <div style={{ textAlign: "center", display: `${display}` }}>
             <h1
                style={{ color: `${selected.value}`, fontSize: 50 }}
             >{`The text color is ${selected.value}!`}</h1>
