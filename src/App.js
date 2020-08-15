@@ -10,15 +10,18 @@ import Header from "./components/Header";
 const items = [
    {
       title: "What is React?",
-      content: "React is a front-end javascript library.",
+      content:
+         "React is a JavaScript library created for building fast and interactive user interfaces for web and mobile applications. It is an open-source, component-based, front-end library responsible only for the application’s view layer. In Model View Controller (MVC) architecture, the view layer is responsible for how the app looks and feels.",
    },
    {
-      title: "Why use react?",
-      content: "React is a good JS library.",
+      title: "Why react?",
+      content:
+         "Because React is easy creation of dynamic applications,Improved performance,Reusable components,Unidirectional data flow,It can be used for the development of both web and mobile apps",
    },
    {
-      title: "How do you use react?",
-      content: "You can use react by creating component.",
+      title: "What is JavaScript framework?",
+      content:
+         "Javascript is a dynamic programming language which is widely used for developing web applications. It is very lightweight and is supported by most of the modern browsers. Moreover, JavaScript supports both object-oriented programming and procedural programming. Thus, it is used for creating web pages with a client-side script to interact with the user and make the web pages dynamic and robust.",
    },
 ];
 
